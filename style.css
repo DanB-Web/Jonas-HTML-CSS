@@ -1,0 +1,26 @@
+/*
+CSS is written in rules, with a rule comprising of a selector and a declaration block
+The declaration block consists of declarations made up of property:value pairs
+*/
+
+body {
+  font-family: Helvetica, Arial;
+
+}
+
+h1, h2 {
+  color: green;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 18px;
+  text-align: justify;
+}
