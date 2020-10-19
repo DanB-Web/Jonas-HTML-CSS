@@ -67,18 +67,6 @@ h3 {
   margin-bottom: 15px;  
 }
 
-/* Adding content with CSS - orange bar after h2*/
-h2:after {
-  display: block;
-  height: 2px;
-  background-color: #e67e22;
-  width: 200px;
-  margin: 0 auto;
-  margin-top: 30px;
-  /* Note you need some 'content' for the element to show, even if the content is just a space */
-  content: " ";
-}
-
 /* PARAGRAPH FORMATTING*/
 .long-copy {
   line-height: 145%;
@@ -151,7 +139,7 @@ header {
   /* Set header to 100% viewport height*/
   height: 100vh;
   /* Centre hero image and make it responsive - linear-gradient causes the contrast effect on top of the hero image */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/hero.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -209,4 +197,64 @@ header {
 /**********************************************************************************************************************************/
 /* SECTION 2 - FEATURE SECTION */
 /**********************************************************************************************************************************/
+.section-features {
+  padding: 60px 0 40px;
+}
 
+/* Adding content with CSS - orange bar after h2*/
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  /* Note you need some 'content' for the element to show, even if the content is just a space */
+  content: " ";
+}
+
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+/**********************************************************************************************************************************/
+/* SECTION 3 - FAVOURITE MEALS SECTION */
+/**********************************************************************************************************************************/
+.section-meals {
+  padding: 0;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.meals-showcase {
+  /* list-style: none; */
+  width: 100%;
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%;
+  margin: 0; /*Due to normalize.css*/
+  /* Prevent zoomed image (below) from overflowing its container */
+  overflow: hidden;
+  background-color: #000; /*The background colour being black causes a shadow effect on the image when combined with opacity below*/
+}
+
+.meal-photo img {
+  opacity: 0.7; /*In the non hovered state, the image has opacity of 0.7 and you fcan see some of the black backgroun, giving a shadow*/
+  width: 100%; 
+  height: auto;
+  /* Slight zoom before transform effect below */
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+  opacity: 1; /*In the hovered state, you have an opacity of 1 so you cannot see any of the black background, and the image is brighter*/
+  transform: scale(1.03); /*Note scaling to 1.03 removes some whitespace between images*/
+}
