@@ -1,6 +1,3 @@
-/**********************************************************************************************************************************/
-/* OVERALL STYLES */
-/**********************************************************************************************************************************/
 /* Box model reset */
 * {
   margin: 0;
@@ -19,11 +16,88 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-/* Max page width container and centre content*/
+/**********************************************************************************************************************************/
+/* OVERALL STYLES */
+/**********************************************************************************************************************************/
+
+/* The row class sets a maximum width and auto margin on the left/right to centre the div*/
 .row {
   max-width: 1140px;
   /* margin shortcut: top/bottom, left/right */
   margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+/* HEADING FORMATTING*/
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  /* Normalize.css adds some margins that we may need to remove after reset (top of the page title)*/
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff; 
+   /* Font size relative to default 20px font-size from html selector */
+   font-size: 200%;
+   word-spacing: 4px;
+   letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;  
+}
+
+/* Adding content with CSS - orange bar after h2*/
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  /* Note you need some 'content' for the element to show, even if the content is just a space */
+  content: " ";
+}
+
+/* PARAGRAPH FORMATTING*/
+.long-copy {
+  line-height: 145%;
+  /* Note 15 + 70 + 15 would be 100, so width 70% and margin-left of 15% 'centres' the text */
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/* ICON FORMATTING */
+.icon-big {
+  font-size: 320%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
 }
 
 /**********************************************************************************************************************************/
@@ -91,19 +165,6 @@ header {
   transform: translate(-50%, -50%);
 }
 
-/* Main text formatting */
-h1 {
-  /* Normalize.css adds some margins that we need to remove after reset */
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #fff;
-  /* Font size relative to default 20px font-size from html selector */
-  font-size: 200%;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 4px;
-}
 
 /*Float logo to top left*/
 .logo {
@@ -133,8 +194,10 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
+  /* To get a nice transition under active links, we need an 'invisible' border to first exist to transition from */
   border-bottom: 2px solid transparent;  
   transition: border-bottom 0.3s;
+  /* Padding to push the bottom border down */
   padding: 8px 0;
 }
 
@@ -142,4 +205,8 @@ h1 {
 .main-nav li a:active {
   border-bottom: 2px solid #e67e22;
 }
+
+/**********************************************************************************************************************************/
+/* SECTION 2 - FEATURE SECTION */
+/**********************************************************************************************************************************/
 
