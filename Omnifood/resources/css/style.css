@@ -1,3 +1,4 @@
+/* Box model reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,5 +8,16 @@
 html {
   background-color: #fff;
   color: #555;
-  font-family: 'Lato', 'Arial';
+  /* Default font settings */
+  font-family: 'Lato', 'Arial' sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+/* Max page width - only absolute value */
+.row {
+  max-width: 1140px;
+  /* margin: top/bottom, left/rigth */
+  margin: 0 auto;
 }
