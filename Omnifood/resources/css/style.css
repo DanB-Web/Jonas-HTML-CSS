@@ -149,7 +149,7 @@ header {
   /* Set header to 100% viewport height*/
   height: 100vh;
   /* Centre hero image and make it responsive - linear-gradient causes the contrast effect on top of the hero image */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/Omnifood/resources/css/img/hero.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -324,3 +324,173 @@ h2:after {
   width: auto;
   margin-right: 10px;
 }
+
+/**********************************************************************************************************************************/
+/* SECTION 4 - WHERE WE ARE SECTION */
+/**********************************************************************************************************************************/
+.section-cities {
+  width: 95%;
+  margin: 20px auto 0;
+  padding-bottom: 20px;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+/* Define the icons as inline-block so you can then give them a fixed width and centre their contents */
+.city-feature i {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 5px;
+  /* How to align text and icons - the negative margin 'pulls/ the icon up*/
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+} 
+
+.city-feature a:link,
+.city-feature a:visited {
+  text-decoration: none;
+  color: #e67e22;
+  font-weight: 400;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: border-bottom 0.2s;
+}
+
+.city-feature a:active, 
+.city-feature a:hover {
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 4px;
+  transition: border-bottom 0.2s;
+} 
+
+/**********************************************************************************************************************************/
+/* SECTION 5 - CUSTOMER TESTIMONIALS */
+/**********************************************************************************************************************************/
+
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/back-customers.jpg);
+  background-size: cover;
+  color: #fff;
+  /* Fix the image so it's fixed when you scroll */
+  background-attachment: fixed;
+}
+
+blockquote {
+  padding: 2%;
+  /* italics coming from loaded Google fonts */
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Add quotation symbol using CSS */
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 500%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+cite {
+  /* Setting <cite> to block element moves it onto new line */
+  display: block;
+  font-size: 90%;
+  margin-top: 25px;
+}
+
+
+cite img {
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  /* Align center line of images and cite text */
+  vertical-align: middle;
+}
+
+/**********************************************************************************************************************************/
+/* SECTION 6 - SIGN UP SECTION */
+/**********************************************************************************************************************************/
+
+.section-plans {
+  background-color: #f4f4f4;
+}
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px 2px #555;
+}
+
+/* Seperate the individual divs inside the plan box */
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Centre the buttons in the last div */
+.plan-box div:last-child {
+  text-align: center;
+  border-bottom: none;
+}
+
+.plan-price {
+  font-size: 300%;
+  font-weight: 100;
+  margin: 10px;
+  color: #e67e22;
+}
+
+/* Note that this span is a child of the parent element - the parent element is set to 300% font-size, so this is the 
+value we need to take into account. Same with the font-weight. */
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+.plan-box i {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 5px;
+  /* How to align text and icons - the negative margin 'pulls/ the icon up*/
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+} 
