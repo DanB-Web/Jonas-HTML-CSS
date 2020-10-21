@@ -660,3 +660,26 @@ footer {
 footer p {
   color: rgb(211, 208, 208);
 }
+
+/**********************************************************************************************************************************/
+/* ANIMATIONS - Note F1 > Autoprefixer:run to add webkits via plugin */
+/**********************************************************************************************************************************/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.js--wp-4 {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+  opacity: 1;
+}
