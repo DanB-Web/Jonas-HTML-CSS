@@ -38,6 +38,7 @@ use floats, so we have to add the clearfix class to the parent <ul> element to p
 }
 
 section {
+  /* padding top/bottom, left/right */
   padding: 80px 0;
 }
 
@@ -102,7 +103,8 @@ h3 {
 /* BUTTON STYLES */
 /**********************************************************************************************************************************/
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
   /* The inline-block property allows you to add margin and padding to a normally inline element, such as an <a> */
   display: inline-block;
   padding: 10px 30px;
@@ -114,7 +116,8 @@ h3 {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
   background-color: #e67e22;
   border: 1px solid #fff;
   color: #fff;
@@ -129,7 +132,9 @@ h3 {
 
 /* 0to255 website used to find darker shade of given color */
 .btn-full:hover, 
-.btn-full:active {
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active {
   background-color: #cf6d17;
   border: 1px solid #cf6d17;
   color: #fff;
@@ -152,6 +157,8 @@ header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/Omnifood/resources/css/img/hero.jpg);
   background-size: cover;
   background-position: center;
+  /*Fixed to make scroll effect*/
+  background-attachment: fixed;
 }
 
 /* Centre the hero text using a transform 'hack' */
@@ -494,3 +501,122 @@ value we need to take into account. Same with the font-weight. */
   vertical-align: middle;
   margin-top: -5px;
 } 
+
+/**********************************************************************************************************************************/
+/* SECTION 7 - CONTACT FORM SECTION */
+/**********************************************************************************************************************************/
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type=text],
+input[type=email], 
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+/* Pseudoclass on universal selector to remove focus blur from all elements */
+*:focus {
+  outline: none;
+}
+
+/**********************************************************************************************************************************/
+/* SECTION 8 - FOOTER SECTION */
+/**********************************************************************************************************************************/
+
+footer {
+  background-color: #333;
+  height: 15vh;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+
+.footer-nav li a:active,
+.footer-nav li a:hover {
+  color: rgb(211, 208, 208);
+  border-bottom: 3px solid rgb(211, 208, 208);
+  padding-bottom: 5px;
+
+}
+
+/* Social links li containers */
+.social-links li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: background-color 0.2s;
+}
+
+/* Remove underlines from icon links */
+.social-links li a {
+  text-decoration: none;
+}
+
+/* Social links icons */
+.social-links li i {
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.3em;
+  color: #fff;
+}
+
+/* Social media colours */
+.social-links li:nth-child(1):hover {
+  background-color: #1877f2;
+}
+
+.social-links li:nth-child(2):hover {
+  background-color: #1da1f2;
+}
+
+.social-links li:nth-child(3):hover {
+  background-color: #db4437;
+}
+
+.social-links li:nth-child(4):hover {
+  background-color: #c32aa3;
+}
+
+
+footer p {
+  color: rgb(211, 208, 208);
+
+}
