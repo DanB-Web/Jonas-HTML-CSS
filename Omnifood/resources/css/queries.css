@@ -2,7 +2,7 @@
 /* MEDIA QUERIES */
 /**********************************************************************************************************************************/
 
-/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+/* Big tablet to 1200px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 1200px) {
   .hero-text-box {
       width: 100%;
@@ -11,7 +11,6 @@
   
   .row { padding: 0 2%; }
 }
-
 
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
@@ -45,8 +44,6 @@
   .plan-price { font-size: 250%; }
   .contact-form { width: 80%; }
 }
-
-
 
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
@@ -114,8 +111,6 @@
   .works-step:last-of-type { margin-bottom: 20px; }
   
 }
-
-
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {

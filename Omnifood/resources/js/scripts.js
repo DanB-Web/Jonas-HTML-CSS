@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-  //When the user scrolls past the setpoint at '.js--section-features', waypoint will either add or remove the nav class
+  //When the user scrolls past the setpoint at '.js--section-features', waypoint will 
+  //either add or remove the nav class
   $('.js--section-features').waypoint(function(direction) {
     if (direction == 'down') {
       $('nav').addClass('sticky animate__animated animate__fadeIn');
@@ -77,6 +78,33 @@ $(document).ready(function() {
     $('.js--wp-4').addClass('animate__animated animate__pulse');
   }, {offset: '50%'});
 
+  //Toggle mobile nav button
+  $('.js--nav-icon').click(function() {
+    var nav = $('.js--main-nav');
+    var icon = $('.js--nav-icon i')
 
+    nav.slideToggle(200);
+
+    if(icon.hasClass('ion-navicon-round')) {
+      icon.addClass('ion-close-round');
+      icon.removeClass('ion-navicon-round');
+    } else {
+      icon.addClass('ion-navicon-round');
+      icon.removeClass('ion-close-round');
+    }
+
+  });
+
+  //Check window width for main nav so links return after resizing
+  $(window).resize(function() {
+    var browserWidth = $(window).width()
+    
+    if(browserWidth > 750) {
+      $('.js--main-nav').css('display', 'block');
+    } else {
+      $('.js--main-nav').css('display', 'none');
+    }
+
+  });
 
 });
